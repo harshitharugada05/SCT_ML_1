@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <div class="logo">🏠 House Price Predictor</div>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Predict House Prices Using Machine Learning</h1>
+        <p>
+            Enter property details and get an instant price prediction
+            powered by Linear Regression.
+        </p>
+    </div>
+</section>
+
+<section class="prediction-card">
+
+    <h2>House Details</h2>
+
+    <form action="/predict" method="POST">
+
+        <input type="number"
+               name="area"
+               placeholder="Area (sq.ft)"
+               required>
+
+        <input type="number"
+               name="bedrooms"
+               placeholder="Bedrooms"
+               required>
+
+        <input type="number"
+               name="bathrooms"
+               placeholder="Bathrooms"
+               required>
+
+        <button type="submit">
+            Predict Price
+        </button>
+
+    </form>
+
+</section>
+
+<footer>
+    House Price Prediction using Linear Regression
+</footer>
+
+</body>
+</html>
